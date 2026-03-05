@@ -1,0 +1,22 @@
+name: Test Runner
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-runner:
+    runs-on:
+      - self-hosted
+      - linux
+      - x64
+    steps:
+      - name: Verification
+        run: echo "Test de fonctionnement du Runner !"
+
+      - name: tests de commandes
+        run: |
+          echo "Le self-hosted Runner fonctionne !K"
+          hostname
+          whoami
+          uname -a
